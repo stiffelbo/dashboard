@@ -1,0 +1,46 @@
+/* Colors */
+
+$color-background: #000;
+$color-background-light: #ffffff;
+$color-background-hover: #282828;
+$color-text: #a6a6a6;
+$color-border: #e3e3e3;
+$color-content-hover: #f1f3f3;
+$color-success: #04ae00;
+$color-info: #56819f;
+$color-danger: #ff0000;
+$color-warning: #f58220;
+$color-warning-hover: #ffa200;
+$color-notif-danger: #de5252;
+$color-notif-danger-hover: #ec7171;
+$color-notif-success: #74b67a;
+$color-notif-success-hover: #96cc9b;
+
+/* sizes */
+
+$base-padding: 18px;
+$base-height: 40px;
+$size-header-height: 60px;
+$size-logo-height: 24px;
+$size-aside-width: 192px;
+$size-base: 16px;
+$size-content: 12px;
+$radius: 3px;
+
+/* Fonts */
+
+//import
+@font-face {
+    font-family: Glyphter;
+    src: url(../images/icons/fonts/Glyphter.eot);
+}
+
+$font-main: Glyphter;
+$brand-font: "Open Sans",
+Helvetica,
+Arial;
+$paragraph-font: "Open Sans",
+Helvetica,
+Arial;
+
+/*layout*/

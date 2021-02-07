@@ -1,0 +1,96 @@
+@import '../mixins';
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $color-background;
+    width: $size-aside-width;
+    height: 100%;
+}
+
+
+/*Components*/
+
+.menu {
+    @include header_item_container(space-between);
+    background-color: $color-background;
+    width: $size-aside-width;
+    max-width: $size-aside-width;
+    height: $size-header-height;
+    .menu__logo_wrapper {
+        height: 100%;
+        padding-top: $base-padding;
+        padding-left: $base-padding;
+        .menu__logo {
+            height: $size-logo-height;
+        }
+    }
+    .menu__burger_wrapper {
+        height: 100%;
+        width: $size-base;
+        padding-top: $base-padding;
+        padding-right: $base-padding;
+        .menu__burger {
+            height: $size-logo-height;
+            width: $size-logo-height;
+            fill: $color-content-hover;
+        }
+    }
+}
+
+.nav {
+    max-width: 100%;
+    padding-bottom: $base-padding*2;
+    border-bottom: 1px solid $color-background-hover;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list-item {
+    height: $base-height;
+    width: 100%;
+    list-style-type: none;
+    .nav__link {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        .nav__badge {
+            margin-right: $base-padding;
+            width: $base-padding / 4;
+            height: 100%;
+        }
+        .nav__icon {
+            margin-right: $base-padding;
+            width: $size-base;
+            max-height: $size-base;
+        }
+        .nav__icon-svg {
+            fill: $color-text;
+        }
+        .nav__text {
+            font-family: $font-main;
+            color: $color-text;
+            font-size: $size-content;
+            font-weight: 100;
+        }
+    }
+    &:hover {
+        background-color: $color-background-hover;
+        .nav__badge {
+            background-color: $color-warning;
+        }
+        .nav__text {
+            color: $color-content-hover;
+        }
+        .nav__icon .nav__icon-svg {
+            fill: $color-content-hover;
+        }
+    }
+}

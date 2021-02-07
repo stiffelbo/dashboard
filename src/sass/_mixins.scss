@@ -1,0 +1,19 @@
+@import "variables";
+@mixin btn($color-bg, $color-txt, $size-txt) {
+    padding: 14px, $base-padding;
+    max-height: $base-height;
+    border-radius: $radius;
+    border: none;
+    background-color: $color-bg;
+    color: $color-txt;
+    font-size: $size-txt;
+    text-align: center;
+}
+
+@mixin header_item_container ($justify) {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: center;
+}

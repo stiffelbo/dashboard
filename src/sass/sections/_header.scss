@@ -1,0 +1,123 @@
+@import '../mixins';
+.header {
+    border: 1px solid $color-border;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    left: $size-aside-width;
+    top: 0;
+    background-color: $color-background-light;
+    height: $size-header-height;
+    width: calc(100vw - #{$size-aside-width});
+}
+
+
+/*Components*/
+
+.payout_menu {
+    @include header_item_container(space-between);
+    border: 1px solid $color-border;
+    padding-right: $base-padding;
+    padding-left: $base-padding;
+    .payout_menu__wallet_wrapper {
+        @include header_item_container(center);
+        padding-right: $base-padding;
+        padding-left: $base-padding;
+        .payout_menu__wallet {
+            height: $size-logo-height;
+            width: $size-logo-height;
+            fill: $color-text;
+        }
+    }
+    .payout_menu__sum_wrapper {
+        @include header_item_container(center);
+        padding-right: $base-padding;
+        .payout_menu__sum {
+            margin: 0;
+            font-size: $size-logo-height;
+            color: $color-text;
+            font-family: $font-main;
+            &::before {
+                content: '$';
+                font-size: $size-logo-height;
+                color: $color-text;
+            }
+        }
+    }
+    .payout_menu__chevron_wrapper {
+        @include header_item_container(center);
+        padding-right: $base-padding;
+        .payout_menu__chevron {
+            height: $size-content;
+            fill: $color-text;
+        }
+    }
+}
+
+.notification {
+    @include header_item_container(center);
+    border: 1px solid $color-border;
+    padding-right: $base-padding;
+    padding-left: $base-padding;
+    .notification__bell_wrapper {
+        position: relative;
+        @include header_item_container(center);
+        .notification__bell {
+            height: $size-logo-height;
+            width: $size-logo-height;
+            fill: $color-text;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            width: $size-base/2;
+            height: $size-base/2;
+            border-radius: 50%;
+            background-color: $color-warning;
+        }
+    }
+}
+
+.user {
+    @include header_item_container(center);
+    border: 1px solid $color-border;
+    padding-right: $base-padding;
+    padding-left: $base-padding;
+    .user__avatar_wrapper {
+        @include header_item_container(center);
+        .user__avatar {
+            fill: $color-text;
+            height: $size-logo-height;
+            width: $size-logo-height;
+        }
+    }
+    .user__username_wrapper {
+        @include header_item_container(center);
+        .user__username {
+            padding-left: $base-padding;
+            font-family: $font-main;
+            font-size: $size-base;
+            color: $color-info;
+        }
+    }
+}
+
+.logout {
+    @include header_item_container(center);
+    border: 1px solid $color-border;
+    padding-right: $base-padding;
+    padding-left: $base-padding;
+    .logout__icon_wrapper {
+        @include header_item_container(center);
+        .logout__icon {
+            height: $size-logo-height;
+            width: $size-logo-height;
+            fill: $color-text;
+        }
+    }
+}
