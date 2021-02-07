@@ -10,10 +10,21 @@
     text-align: center;
 }
 
-@mixin header_item_container ($justify) {
+@mixin item_container ($justify) {
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: $justify;
     align-items: center;
+}
+
+@mixin section-wrapper {
+    margin: $base-padding;
+    box-shadow: 1px 1px 13px -3px $color-background;
+    -webkit-box-shadow: 1px 1px 13px -3px $color-background;
+    -moz-box-shadow: 1px 1px 13px -3px $color-background;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: right;
 }

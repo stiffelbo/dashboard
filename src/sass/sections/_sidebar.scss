@@ -12,7 +12,7 @@
 /*Components*/
 
 .menu {
-    @include header_item_container(space-between);
+    @include item_container(space-between);
     background-color: $color-background;
     width: $size-aside-width;
     max-width: $size-aside-width;
@@ -93,4 +93,51 @@
             fill: $color-content-hover;
         }
     }
+}
+
+.manager {
+    max-width: 100%;
+}
+
+.manager__header_wrapper {
+    width: 100%;
+    height: $base-height;
+}
+
+.manager__header {
+    padding-left: $base-padding;
+    font-family: $font-main;
+    font-size: $size-content;
+    color: $color-text;
+    text-transform: uppercase;
+}
+
+.manager__data_wrapper {
+    @include item_container(flex-start);
+    padding-left: $base-padding;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2%;
+        left: 24%;
+        width: $base-height*0.25;
+        height: $base-height*0.25;
+        border-radius: 50%;
+        background-color: $color-success;
+    }
+}
+
+.manager__avatar {
+    width: $base-height;
+    height: $base-height;
+    border-radius: 50%;
+    border: none;
+}
+
+.manager__name {
+    padding-left: $base-padding;
+    font-family: $font-main;
+    font-size: $size-content;
+    color: $color-info;
 }
