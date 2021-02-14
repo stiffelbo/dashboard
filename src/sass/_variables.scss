@@ -25,23 +25,33 @@ $size-header-height: 60px;
 $size-logo-height: 24px;
 $size-aside-width: 192px;
 $size-base: 16px;
-$size-content: 12px;
 $radius: 3px;
+
+/*Transition*/
+
+$transition-hover: 0.35s;
 
 /* Fonts */
 
+$size-page-header: 20px;
+$size-row-header: 18px;
+$size-txt: 16px;
+$size-content: 12px;
 //import
 @font-face {
     font-family: Glyphter;
     src: url(../images/icons/fonts/Glyphter.eot);
 }
 
-$font-main: Glyphter;
+$font-main: 'Barlow',
+sans-serif;
 $brand-font: "Open Sans",
 Helvetica,
 Arial;
-$paragraph-font: "Open Sans",
+$font-paragraph: "Open Sans",
 Helvetica,
 Arial;
+$font-header: 'Barlow',
+sans-serif;
 
 /*layout*/

@@ -2,41 +2,14 @@
 .sidebar {
     position: fixed;
     left: 0;
-    top: 0;
+    top: $size-header-height;
+    right: 50%;
     background-color: $color-background;
-    width: $size-aside-width;
     height: 100%;
 }
 
 
 /*Components*/
-
-.menu {
-    @include item_container(space-between);
-    background-color: $color-background;
-    width: $size-aside-width;
-    max-width: $size-aside-width;
-    height: $size-header-height;
-    .menu__logo_wrapper {
-        height: 100%;
-        padding-top: $base-padding;
-        padding-left: $base-padding;
-        .menu__logo {
-            height: $size-logo-height;
-        }
-    }
-    .menu__burger_wrapper {
-        height: 100%;
-        width: $size-base;
-        padding-top: $base-padding;
-        padding-right: $base-padding;
-        .menu__burger {
-            height: $size-logo-height;
-            width: $size-logo-height;
-            fill: $color-content-hover;
-        }
-    }
-}
 
 .nav {
     max-width: 100%;
@@ -140,4 +113,13 @@
     font-family: $font-main;
     font-size: $size-content;
     color: $color-info;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+    .asside-back {
+        display: none;
+    }
 }

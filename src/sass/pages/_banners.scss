@@ -1,0 +1,95 @@
+@import '../variables';
+@import '../layout';
+@import '../mixins';
+.banners__header {
+    @include section_header();
+}
+
+//::-webkit-calendar-picker-indicator
+
+/*
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+*/
+
+.banners__content_wrapper {
+    background-color: $color-background-light;
+}
+
+.banners__button_wrapper {
+    @include section-row-wrapper();
+    background-color: $color-background-light;
+}
+
+.banners__button {
+    @include btn($color-warning, $color-background-light, $size-txt);
+    &:hover {
+        background-color: $color-warning-hover;
+        transition: all $transition-hover ease-out;
+    }
+}
+
+.banners__table_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $color-background-light;
+}
+
+.banners__row {
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    background-color: $color-background-light;
+    border-bottom: 1px solid $color-border;
+    transition: all $transition-hover ease-out;
+    &:hover {
+        background-color: $color-content-hover;
+        transition: all $transition-hover ease-out;
+        .banners__cell_action {
+            visibility: visible;
+            cursor: pointer;
+        }
+    }
+}
+
+.banners__cell_row_header {
+    flex: 0 0 45%;
+    padding-left: $base-padding;
+}
+
+.banners__row_header {
+    @include item_label();
+}
+
+.banners__cell_link {
+    flex: 0 0 45%;
+    padding-left: $base-padding;
+    a {
+        font-family: $font-header;
+        font-size: $size-txt;
+        color: $color-info;
+    }
+}
+
+.banners__cell_action {
+    flex: 0 0 5%;
+    visibility: hidden;
+}
+
+.banners__icon_link {
+    width: $size-txt;
+    fill: $color-warning-hover;
+    &:hover {
+        fill: $color-warning;
+    }
+}
+
+.banners__icon_trash {
+    width: $size-txt;
+    fill: $color-text;
+    &:hover {
+        fill: $color-notif-danger;
+    }
+}
