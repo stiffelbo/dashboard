@@ -11,7 +11,7 @@
 
 <body>
     <header class="header">
-        <div class="menu">
+        <div class="header__menu">
             <div class="menu__logo_wrapper">
                 <img src="images/logo.png" alt="" class="menu__logo">
             </div>
@@ -23,7 +23,7 @@
                 </svg>
             </div>
         </div>
-        <div class="header-container">
+        <div class="header-utils">
             <div class="payout_menu">
                 <div class="payout_menu__wallet_wrapper">
                     <svg version="1.1" class="payout_menu__wallet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 18" style="enable-background:new 0 0 17 18;" xml:space="preserve">
@@ -72,8 +72,8 @@
             </div>
         </div>
     </header>
-    <div class="row mt-header">
-        <aside class="sidebar col-md-2 bg-black">
+    <div class="row main-row">
+        <aside class="sidebar">
             <div class="nav">
                 <ul class="nav__list">
                     <li class="nav__list-item">
@@ -175,13 +175,9 @@
                 </div>
             </div>
         </aside>
-        <div class="col-md-2 asside-back">
 
-        </div>
-        <div class="col-md-10 col-sm-12 bg-main">
-
+        <div class="pages">
             <main class="container-page">
-
                 <section class="section pers_data" id="pers_data">
                     <div class="pers_data__header_wrapper">
                         <h1 class="pers_data__header">Personal Data</h1>
@@ -247,335 +243,10 @@
                     </div>
                 </section>
 
-                <section class="section banners d-none" id="banners">
-                    <div class="banners__header_wrapper">
-                        <h1 class="banners__header">Banners</h1>
-                    </div>
-                    <div class="banners__content_wrapper">
-                        <div class="banners__button_wrapper">
-                            <button class="banners__button">+ add new</button>
-                        </div>
-                        <div class="banners__table_wrapper">
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Banner Main</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Sign up banner</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Banner left side</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Banner top</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Banner vertical</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Banner front</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row banners__row">
-                                <div class="banners__cell_row_header">
-                                    <h3 class="banners__row_header">Home page</h3>
-                                </div>
-                                <div class="banners__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="banners__cell_action">
-                                    <svg version="1.1" class="banners__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banners__button_wrapper">
-                            <button class="banners__button">+ add new</button>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section links d-none" id="links">
-                    <div class="links__header_wrapper">
-                        <h1 class="links__header">Links</h1>
-                    </div>
-                    <div class="links__content_wrapper">
-                        <div class="links__button_wrapper">
-                            <button class="links__button">+ add new</button>
-                        </div>
-                        <div class="links__table_wrapper">
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row links__row">
-                                <div class="links__cell_row_header">
-                                    <h3 class="links__row_header">Home page</h3>
-                                </div>
-                                <div class="links__cell_link">
-                                    <a href="http://www.homepage.com">http://www.homepage.com</a>
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                                    <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
-                                        C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
-                                    </svg>
-
-                                </div>
-                                <div class="links__cell_action">
-                                    <svg version="1.1" class="links__icon_trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                                    <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                                        V6H8z M5,6v8h1V6H5z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="links__button_wrapper">
-                            <button class="links__button">+ add new</button>
-                        </div>
-                    </div>
-                </section>
-
             </main>
         </div>
     </div>
+
 </body>
 
 </html>

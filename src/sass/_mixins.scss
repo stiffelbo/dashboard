@@ -24,10 +24,9 @@
     border-left: 1px solid $color-border;
     padding-right: $base-padding;
     padding-left: $base-padding;
-    @media (max-width: 992px) {
-        border: 1px solid $color-border;
-        height: $size-logo-height;
-        padding: $size-txt 0;
+    @media(max-width: 480px) {
+        padding-right: $base-padding / 2;
+        padding-left: $base-padding / 2;
     }
 }
 
