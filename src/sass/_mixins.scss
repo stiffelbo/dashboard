@@ -1,71 +1,72 @@
 @import "variables";
 @mixin btn($color-bg, $color-txt, $size-txt) {
-    padding: 14px $base-padding;
-    max-height: $base-height;
-    border-radius: $radius;
-    border: none;
-    background-color: $color-bg;
-    color: $color-txt;
-    font-family: $font-main;
-    font-size: $size-txt;
-    text-align: center;
-    transition: all $transition-hover ease-out;
+  padding: 14px $base-padding;
+  max-height: $base-height;
+  border-radius: $radius;
+  border: none;
+  background-color: $color-bg;
+  color: $color-txt;
+  font-family: $font-main;
+  font-size: $size-txt;
+  text-align: center;
+  transition: all $transition-hover ease-out;
 }
 
 @mixin item_container ($justify, $height:100%) {
-    height: $height;
-    display: flex;
-    flex-direction: row;
-    justify-content: $justify;
-    align-items: center;
+  height: $height;
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: center;
 }
 
 @mixin header_utils_warpper {
-    border-left: 1px solid $color-border;
-    padding-right: $base-padding;
-    padding-left: $base-padding;
-    @media(max-width: 480px) {
-        padding-right: $base-padding / 2;
-        padding-left: $base-padding / 2;
-    }
+  border-left: 1px solid $color-border;
+  padding-right: $base-padding;
+  padding-left: $base-padding;
+  @media(max-width: 480px) {
+    padding-right: $base-padding / 2;
+    padding-left: $base-padding / 2;
+  }
 }
 
 @mixin section-wrapper {
-    margin: $base-padding;
-    box-shadow: 1px 1px 13px -3px $color-background;
-    -webkit-box-shadow: 1px 1px 13px -3px $color-background;
-    -moz-box-shadow: 1px 1px 13px -3px $color-background;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: right;
+  margin: $base-padding;
+  box-shadow: 1px 1px 13px -3px $color-background;
+  -webkit-box-shadow: 1px 1px 13px -3px $color-background;
+  -moz-box-shadow: 1px 1px 13px -3px $color-background;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: right;
 }
 
 @mixin section_header {
-    text-transform: uppercase;
-    font-family: $brand-font;
-    font-size: $size-page-header;
-    color: $color-text;
-    &_wrapper {
-        padding: $base-padding;
-        background-color: $color-background-light;
-        border-bottom: 1px solid $color-border;
-    }
+  text-transform: uppercase;
+  font-family: $brand-font;
+  font-size: $size-page-header;
+  color: $color-text;
+
+  &_wrapper {
+    padding: $base-padding;
+    background-color: $color-background-light;
+    border-bottom: 1px solid $color-border;
+  }
 }
 
 @mixin section-row-wrapper ($border-bottom: 'none') {
-    @include item_container(center);
-    padding: $base-padding 0;
-    border-bottom: $border-bottom;
-    @media (max-width: 767px) {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: initial;
-    }
+  @include item_container(center);
+  padding: $base-padding 0;
+  border-bottom: $border-bottom;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+  }
 }
 
 @mixin item_label {
-    font-family: $font-header;
-    font-size: $size-row-header;
-    color: $color-text;
+  font-family: $font-header;
+  font-size: $size-row-header;
+  color: $color-text;
 }

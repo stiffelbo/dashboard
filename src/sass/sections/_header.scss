@@ -1,48 +1,56 @@
 @import '../mixins';
+
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-background-light;
+  height: $size-header-height;
+  z-index: 100;
+  @media (max-width: 768px) {
+    position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+}
+
+.header-fixed {
+  @media (max-width: 768px) {
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: $color-background-light;
-    height: $size-header-height;
-    z-index: 100;
-    @media (max-width: 768px) {
-        position: static;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: auto;
-    }
+  }
 }
 
 
 /*layout*/
 
 .header-utils {
-    //border: 1px solid magenta;
-    //background-color: lawngreen;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    height: $size-header-height;
-    @media (max-width: 768px) {
-        order: 1;
-        width: 100%;
-    }
+  //border: 1px solid magenta;
+  //background-color: lawngreen;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: $size-header-height;
+  @media (max-width: 768px) {
+    order: 1;
+    width: 100%;
+  }
 }
 
 .header__menu {
-    @include item_container(space-between, $size-header-height);
-    background-color: $color-background;
-    width: calc(100%/6);
-    @media (max-width: 768px) {
-        order: 2;
-        width: 100%;
-    }
+  @include item_container(space-between, $size-header-height);
+  background-color: $color-background;
+  width: calc(100%/6);
+  @media (max-width: 768px) {
+    order: 2;
+    width: 100%;
+  }
 }
 
 //******************************************
@@ -50,135 +58,154 @@
 /*Components - menu*/
 
 .menu__logo_wrapper {
-    height: 100%;
-    padding-top: $base-padding;
-    padding-left: $base-padding;
-    .menu__logo {
-        height: $size-logo-height;
-    }
+  height: 100%;
+  padding-top: $base-padding;
+  padding-left: $base-padding;
+
+  .menu__logo {
+    height: $size-logo-height;
+  }
 }
 
 .menu__burger_wrapper {
-    height: 100%;
-    padding-top: $base-padding;
-    padding-right: $base-padding;
-    .menu__burger {
-        height: $size-logo-height;
-        width: $size-logo-height;
-        fill: $color-content-hover;
-    }
+  height: 100%;
+  padding-top: $base-padding;
+  padding-right: $base-padding;
+
+  .menu__burger {
+    height: $size-logo-height;
+    width: $size-logo-height;
+    fill: $color-content-hover;
+  }
 }
 
 
 /*Components - utils*/
 
 .payout_menu {
-    @include item_container(space-between, $size-header-height);
-    @include header_utils_warpper();
-    .payout_menu__wallet_wrapper {
-        @include item_container(center);
-        padding-right: $base-padding;
-        padding-left: $base-padding;
-        .payout_menu__wallet {
-            height: $size-logo-height;
-            width: $size-logo-height;
-            fill: $color-text;
-        }
+  @include item_container(space-between, $size-header-height);
+  @include header_utils_warpper();
+}
+
+.payout_menu__wallet_wrapper {
+  @include item_container(center);
+  padding-right: $base-padding;
+  padding-left: $base-padding;
+
+  .payout_menu__wallet {
+    height: $size-logo-height;
+    width: $size-logo-height;
+    fill: $color-text;
+  }
+}
+
+.payout_menu__sum_wrapper {
+  @include item_container(center);
+  padding-right: $base-padding;
+  @media (max-width: 480px) {
+    .payout_menu__sum {
+      font-size: $size-txt;
+
+      &::before {
+        font-size: $size-txt;
+      }
     }
-    .payout_menu__sum_wrapper {
-        @include item_container(center);
-        padding-right: $base-padding;
-        .payout_menu__sum {
-            margin: 0;
-            font-size: $size-logo-height;
-            color: $color-text;
-            font-family: $font-main;
-            &::before {
-                content: '$';
-                font-size: $size-logo-height;
-                color: $color-text;
-            }
-        }
-        @media (max-width: 480px) {
-            .payout_menu__sum {
-                font-size: $size-txt;
-                &::before {
-                    font-size: $size-txt;
-                }
-            }
-        }
-    }
-    .payout_menu__chevron_wrapper {
-        @include item_container(center, $size-header-height);
-        padding-right: $base-padding;
-        .payout_menu__chevron {
-            height: $size-content;
-            fill: $color-text;
-        }
-    }
+  }
+}
+
+.payout_menu__chevron_wrapper {
+  @include item_container(center, $size-header-height);
+  padding-right: $base-padding;
+
+  .payout_menu__chevron {
+    height: $size-content;
+    fill: $color-text;
+  }
+}
+
+.payout_menu__sum {
+  margin: 0;
+  font-size: $size-logo-height;
+  color: $color-text;
+  font-family: $font-main;
+
+  &::before {
+    content: '$';
+    font-size: $size-logo-height;
+    color: $color-text;
+  }
 }
 
 .notification {
-    @include item_container(center, $size-header-height);
-    @include header_utils_warpper();
-    .notification__bell_wrapper {
-        position: relative;
-        @include item_container(center);
-        .notification__bell {
-            height: $size-logo-height;
-            width: $size-logo-height;
-            fill: $color-text;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            top: 27%;
-            left: 50%;
-            width: $size-base/2;
-            height: $size-base/2;
-            border-radius: 50%;
-            background-color: $color-warning;
-        }
-    }
+  @include item_container(center, $size-header-height);
+  @include header_utils_warpper();
+}
+
+.notification__bell_wrapper {
+  position: relative;
+  @include item_container(center);
+
+  .notification__bell {
+    height: $size-logo-height;
+    width: $size-logo-height;
+    fill: $color-text;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    width: $size-base/2;
+    height: $size-base/2;
+    border-radius: 50%;
+    background-color: $color-warning;
+  }
 }
 
 .user {
-    @include item_container(center, $size-header-height);
-    @include header_utils_warpper();
-    .user__avatar_wrapper {
-        @include item_container(center);
-        .user__avatar {
-            fill: $color-text;
-            height: $size-logo-height;
-            width: $size-logo-height;
-        }
+  @include item_container(center, $size-header-height);
+  @include header_utils_warpper();
+  @media (max-width: 480px) {
+    .user__username {
+      padding: $size-txt/2;
+      font-size: $size-txt;
     }
-    .user__username_wrapper {
-        @include item_container(center);
-        .user__username {
-            padding-left: $base-padding;
-            font-family: $font-main;
-            font-size: $size-base;
-            color: $color-info;
-        }
-    }
-    @media (max-width: 480px) {
-        .user__username {
-            padding: $size-txt/2;
-            font-size: $size-txt;
-        }
-    }
+  }
+}
+
+.user__avatar_wrapper {
+  @include item_container(center);
+
+  .user__avatar {
+    fill: $color-text;
+    height: $size-logo-height;
+    width: $size-logo-height;
+  }
+}
+
+.user__username_wrapper {
+  @include item_container(center);
+
+  .user__username {
+    padding-left: $base-padding;
+    font-family: $font-main;
+    font-size: $size-base;
+    color: $color-info;
+  }
 }
 
 .logout {
-    @include item_container(center, $size-header-height);
-    @include header_utils_warpper();
-    .logout__icon_wrapper {
-        @include item_container(center);
-        .logout__icon {
-            height: $size-logo-height;
-            width: $size-logo-height;
-            fill: $color-text;
-        }
+  @include item_container(center, $size-header-height);
+  @include header_utils_warpper();
+
+  .logout__icon_wrapper {
+    @include item_container(center);
+
+    .logout__icon {
+      height: $size-logo-height;
+      width: $size-logo-height;
+      fill: $color-text;
     }
+  }
 }

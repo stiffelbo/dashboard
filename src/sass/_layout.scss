@@ -1,75 +1,75 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 15px;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
 .container-fluid {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .container-page {
-    margin: $base-padding;
-    background-color: $color-background-main;
+  margin: $base-padding;
+  background-color: $color-background-main;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
 /*bg color heleprs for setting base layout*/
 
 .bg-black {
-    background-color: black;
+  background-color: black;
 }
 
 .bg-blue {
-    background-color: rgb(8, 13, 88);
+  background-color: rgb(8, 13, 88);
 }
 
 .bg-yellow {
-    background-color: rgb(88, 67, 8);
+  background-color: rgb(88, 67, 8);
 }
 
 .bg-green {
-    background-color: rgb(11, 88, 8);
+  background-color: rgb(11, 88, 8);
 }
 
 .d-none {
-    display: none;
+  display: none;
 }
 
 @mixin grid($prefix) {
-    @for $i from 1 through 12 {
-        .col-#{$prefix}-#{$i} {
-            $width: 100% / 12 * $i;
-            flex: 0 0 $width;
-            max-width: $width;
-        }
+  @for $i from 1 through 12 {
+    .col-#{$prefix}-#{$i} {
+      $width: 100% / 12 * $i;
+      flex: 0 0 $width;
+      max-width: $width;
     }
+  }
 }
 
 @media(max-width: 480px) {
-    @include grid('mob');
+  @include grid('mob');
 }
 
 @media(min-width: 481px) {
-    @include grid('tab');
+  @include grid('tab');
 }
 
 @media(min-width: 768px) {
-    @include grid('md');
+  @include grid('md');
 }
 
 @media(min-width: 1024px) {
-    @include grid('xl');
+  @include grid('xl');
 }

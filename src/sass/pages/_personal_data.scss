@@ -1,68 +1,74 @@
 @import '../variables';
 @import '../layout';
 @import '../mixins';
+
 .pers_data__header {
-    @include section_header();
+  @include section_header();
 }
 
 .pers_data__personal_wrapper,
 .pers_data__contact_wrapper,
 .pers_data__wallet_wrapper,
 .pers_data__password_wrapper {
-    @include section-row-wrapper(1px solid $color-border);
-    background-color: $color-background-light;
+  @include section-row-wrapper(1px solid $color-border);
+  background-color: $color-background-light;
 }
 
 .pers_data__input_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: $base-padding 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: $base-padding 0;
 }
 
 .pers_data__input {
-    height: $base-height;
-    border-radius: $radius;
-    border: 1px solid $color-border;
-    width: 66%;
-    &:focus {
-        border: 2px solid $color-info;
-    }
+  height: $base-height;
+  border-radius: $radius;
+  border: 1px solid $color-border;
+  width: 66%;
+
+  &:focus {
+    border: 2px solid $color-info;
+  }
 }
 
 .pers_data__label {
-    @include item_label();
-    font-weight: 600;
+  @include item_label();
+  font-weight: 600;
 }
 
 .pers_data__button_wrapper {
-    @include section-row-wrapper();
-    background-color: $color-background-light;
+  @include section-row-wrapper();
+  background-color: $color-background-light;
 }
 
 .pers_data__button {
-    @include btn($color-warning, $color-background-light, $size-txt);
-    &:hover {
-        background-color: $color-warning-hover;
-        transition: all $transition-hover ease-out;
-    }
+  @include btn($color-warning, $color-background-light, $size-txt);
+
+  &:hover {
+    background-color: $color-warning-hover;
+    transition: all $transition-hover ease-out;
+  }
 }
 
 @media (max-width: 768px) {
-    .pers_data__input_wrapper {
-        flex-direction: column;
-        align-items: initial;
-        justify-content: flex-start;
-        padding: 0 $base-padding;
-    }
-    .pers_data__button_wrapper {
-        padding: 0 $base-padding;
-    }
-    .pers_data__label {
-        margin-bottom: $size-txt;
-    }
-    .pers_data__input {
-        width: 100%;
-    }
+  .pers_data__input_wrapper {
+    flex-direction: column;
+    align-items: initial;
+    justify-content: flex-start;
+    padding: 0 $base-padding;
+  }
+
+  .pers_data__button_wrapper {
+    padding: 0 $base-padding;
+  }
+
+  .pers_data__label {
+    margin-bottom: $size-txt;
+  }
+
+  .pers_data__input {
+    width: 100%;
+  }
 }

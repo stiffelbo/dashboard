@@ -1,8 +1,9 @@
 @import '../variables';
 @import '../layout';
 @import '../mixins';
+
 .links__header {
-    @include section_header();
+  @include section_header();
 }
 
 //::-webkit-calendar-picker-indicator
@@ -15,83 +16,89 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 */
 
 .links_content_wrapper {
-    background-color: $color-background-light;
+  background-color: $color-background-light;
 }
 
 .links__button_wrapper {
-    @include section-row-wrapper();
-    background-color: $color-background-light;
+  @include section-row-wrapper();
+  background-color: $color-background-light;
 }
 
 .links__button {
-    @include btn($color-warning, $color-background-light, $size-txt);
-    &:hover {
-        background-color: $color-warning-hover;
-        transition: all $transition-hover ease-out;
-    }
+  @include btn($color-warning, $color-background-light, $size-txt);
+
+  &:hover {
+    background-color: $color-warning-hover;
+    transition: all $transition-hover ease-out;
+  }
 }
 
 .links__table_wrapper {
-    width: 100%;
-    margin: 0 auto;
-    background-color: $color-background-light;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-background-light;
 }
 
 .links__row {
-    width: 60%;
-    margin: 0 auto;
-    align-items: center;
-    background-color: $color-background-light;
-    border-bottom: 1px solid $color-border;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+  background-color: $color-background-light;
+  border-bottom: 1px solid $color-border;
+  transition: all $transition-hover ease-out;
+
+  &:hover {
+    background-color: $color-content-hover;
     transition: all $transition-hover ease-out;
-    &:hover {
-        background-color: $color-content-hover;
-        transition: all $transition-hover ease-out;
-        .links__cell_action {
-            visibility: visible;
-            cursor: pointer;
-        }
+
+    .links__cell_action {
+      visibility: visible;
+      cursor: pointer;
     }
+  }
 }
 
 .links__cell_row_header {
-    flex: 0 0 45%;
-    padding-left: $base-padding;
+  flex: 0 0 45%;
+  padding-left: $base-padding;
 }
 
 .links__row_header {
-    font-family: $font-header;
-    font-size: $size-row-header;
-    color: $color-text;
+  font-family: $font-header;
+  font-size: $size-row-header;
+  color: $color-text;
 }
 
 .links__cell_link {
-    flex: 0 0 45%;
-    padding-left: $base-padding;
-    a {
-        font-family: $font-header;
-        font-size: $size-txt;
-        color: $color-info;
-    }
+  flex: 0 0 45%;
+  padding-left: $base-padding;
+
+  a {
+    font-family: $font-header;
+    font-size: $size-txt;
+    color: $color-info;
+  }
 }
 
 .links__cell_action {
-    flex: 0 0 5%;
-    visibility: hidden;
+  flex: 0 0 5%;
+  visibility: hidden;
 }
 
 .links__icon_link {
-    width: $size-txt;
-    fill: $color-warning-hover;
-    &:hover {
-        fill: $color-warning;
-    }
+  width: $size-txt;
+  fill: $color-warning-hover;
+
+  &:hover {
+    fill: $color-warning;
+  }
 }
 
 .links__icon_trash {
-    width: $size-txt;
-    fill: $color-text;
-    &:hover {
-        fill: $color-notif-danger;
-    }
+  width: $size-txt;
+  fill: $color-text;
+
+  &:hover {
+    fill: $color-notif-danger;
+  }
 }
