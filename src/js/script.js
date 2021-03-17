@@ -1,3 +1,4 @@
+/* global Chart, chart */
 const select = {
 
   burger: '.menu__burger',
@@ -88,7 +89,7 @@ modalCloseBtn.forEach(btn => {
 });
 
 //append close action to overlay bg
-overlay.addEventListener('click', e => {
+overlay.addEventListener('click', () => {
   console.log('overlay bg clicked');
   closeModal();  
 });
@@ -153,6 +154,8 @@ const chart = new Chart (ctx, {
     }]
   },
 });
+
+console.log(chart);
 
 
 
